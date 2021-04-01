@@ -30,15 +30,28 @@ public class DocumentationPageStepDefs {
     public void user_search_for_the_Grid_in_search_panel_and_selects_the_second_result() throws InterruptedException {
         DocumentationPage DocsPage = new DocumentationPage();
         DocsPage.SearchBox.sendKeys("Grid");
+
+        //DocsPage.GridBtn.click();
+
+        DocsPage.GridBtn.click();
         Thread.sleep(5000);
-        DocsPage.Grid2ndOptions.click();
-        Thread.sleep(5000);
+
+        DocsPage.Grid3Btn.click();
+        BrowserUtils.waitFor(5);
 
 
     }
     @Then("User should be able to see the results")
     public void user_should_be_able_to_see_the_results() {
         DocumentationPage documentationPage = new DocumentationPage();
+    //String ExpectedPageTitle = Driver.get().getTitle();
+        String actualResult = documentationPage.Result.getAttribute("id");
+        System.out.println("actualResult = " + actualResult);
+  
+    
+
+
+        System.out.println("Driver.get().getTitle() = " + Driver.get().getTitle());
 
 
     }
