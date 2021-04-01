@@ -1,6 +1,6 @@
 Feature: Multiple module
 
-
+@wip
   Scenario: Verify About, Governance and Learn More module
    Given user is in the homepage
     When user clicks on About menu

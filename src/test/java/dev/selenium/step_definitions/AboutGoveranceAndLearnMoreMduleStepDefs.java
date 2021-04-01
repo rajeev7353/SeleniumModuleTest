@@ -3,6 +3,7 @@ package dev.selenium.step_definitions;
 import dev.selenium.pages.BasePage;
 import dev.selenium.pages.HomePage;
 import dev.selenium.pages.ProjectStrectureAndGovernancePage;
+import dev.selenium.utilities.BrowserUtils;
 import dev.selenium.utilities.Driver;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -58,7 +59,7 @@ public class AboutGoveranceAndLearnMoreMduleStepDefs {
         newPage.learnMoreOption.click();
 
 
-        Thread.sleep(3000);
+     BrowserUtils.waitFor(4);
 
 
 

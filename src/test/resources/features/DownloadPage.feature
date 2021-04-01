@@ -1,4 +1,6 @@
 Feature: Download page
+
+  @wip
   Scenario: Verify Download module
     Given user is in the homepage
     When user cliks on Downloads menu

@@ -41,17 +41,18 @@ public class DocumentationPageStepDefs {
 
 
     }
-    @Then("User should be able to see the results")
-    public void user_should_be_able_to_see_the_results() {
+    @Then("User should be able to see the Grid {int} :: Documentation for Selenium page title")
+    public void user_should_be_able_to_see_the_Grid_Documentation_for_Selenium_page_title(Integer int1) {
+
         DocumentationPage documentationPage = new DocumentationPage();
-    //String ExpectedPageTitle = Driver.get().getTitle();
-        String actualResult = documentationPage.Result.getAttribute("id");
+            String ExpectedPageTitle = "Grid 3 :: Documentation for Selenium";
+        String actualResult =Driver.get().getTitle();
         System.out.println("actualResult = " + actualResult);
+
+        Assert.assertEquals(ExpectedPageTitle,actualResult);//Verify that user seers the result after clicking on 2nd search result
   
     
 
-
-        System.out.println("Driver.get().getTitle() = " + Driver.get().getTitle());
 
 
     }
